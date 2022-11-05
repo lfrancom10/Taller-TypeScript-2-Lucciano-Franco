@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller 2 TypeScript Lucciano Franco </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        body
+        {
+            background:#ABEBC6;          
+        }
+        .card
+        {
+            background-color:#F8C471 ;       
+        }
+        h6
+        {
+        color:#000000;
+        text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+<div class="row mt-3">
+<div class="col">
+<div class="card">
+<div class="card-body" >
+<div class="h3 p-3">Series de televisión</div>
+<form class="m-3"> 
+<div class="form-row">
+</div>
+</form>
+<table class="table" id="table">
+<thead class="thead">
+<tr>
+    <th>Número</th>
+    <th>Nombre</th>
+    <th>Canal</th>
+    <th>Temporada</th>
+</tr>
+</thead>
+<tbody>
+    <tr>
+        <td>1</td>
+        <td><h6 id="Breaking Bad" onclick="Breaking_Bad()">Breaking Bad</p></td>
+        <td>AMC</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td><h6 id="Game of Thrones" onclick="Game_of_thrones()">Game of Thrones</a></td>
+        <td>HBO</td>
+        <td>8</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td><h6 id="Los Anillos De Poder" onclick="Anillos_poder()">Los Anillos De Poder</a></td>
+        <td>Amazon</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td><h6 id="Shameless" onclick="Shameless()">Shameless</a></td>
+        <td>HBO</td>
+        <td>11</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td><h6 id="Arcane" onclick="Arcane()">Arcane</a></td>
+        <td>Netflix</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td><h6 id="Primal" onclick="Primal()">Primal</a></td>
+        <td>HBO</td>
+        <td>2</td>
+    </tr>
+    </tbody>
+    </table>
+    <div class="row justify-content-end">
+    <h5 class="col-4"><strong>Promedio de series    :</strong></h5>
+    <h5 class="col-4" id="1"><strong></strong></h5>
+    </div>
+    </div>
+    </div>
+                
+    </div>
+    <div class="col border"   style="width: 1rem;">
+    <div class="h3 p-3"></div>
+    <div class="card" id="card1">
+    <img class="card-img-top" id="fluid"> </img>
+    <img src= "" id="imagen"> </img> 
+    <div class="card-body">
+    <h5 class="card-title" id="tituloCard">Series de televisión</h5>
+    <p class="card-text" id="texto">Si desea ver la descripción de las series, dar click en la serie.</p>
+    <a href="#" class="card-link" id="link"></a>
+    </div>
+    </div>
+    </div>
+        </div>
+    </div>
+    <script type="module" src="./scripts/course.js" ></script>
+    <script type="module" src="./scripts/dataCourses.js" ></script>
+    <script type="module" src="./scripts/main.js"></script>
+    <script>
+        function Breaking_Bad(){
+            var titulo=document.getElementById("tituloCard");
+            titulo.innerHTML="Breaking Bad"
+            var imagen=document.getElementById("imagen");
+            imagen.setAttribute("src","Bad.jpg" )
+            imagen.setAttribute("width","450rem")
+            imagen.setAttribute("height","530rem");
+            imagen.setAttribute("id","imagen");
+            var texto=document.getElementById("texto");
+            texto.innerHTML="Un profesor de Química de secundaria con cáncer terminal se asocia a un exestudiante para asegurar el futuro de su familia al fabricar y vender metanfetamina."
+            var link=document.getElementById("link");
+            link.setAttribute("href","https://www.netflix.com/co/title/70143836");
+            link.setAttribute("class","card-link");
+            link.setAttribute("id","link");
+            link.innerHTML="Breaking Bad en Netflix"
+        }
+    </script>
+    <script>
+        function Game_of_thrones(){
+            var titulo=document.getElementById("tituloCard");
+            titulo.innerHTML="Game of Thrones"
+            var imagen=document.getElementById("imagen");
+            imagen.setAttribute("src","GOT.jpg" )
+            imagen.setAttribute("width","450rem")
+            imagen.setAttribute("height","530rem");
+            imagen.setAttribute("id","imagen");
+            var texto=document.getElementById("texto");
+            texto.innerHTML="El libro mejor vendido de la serie 'A Song of Ice and Fire' escrito por George R.R, es llevado a la pantalla chica cuando HBO decide recrear esta historia épica de fantasía. Es la descripción de dos familias poderosas, reyes y reinas, caballeros y renegados, hombres falsos y "+
+            "honestos, haciendo parte de un juego mortal por el control de los Siete Reinados de Westeros y por sentarse en el trono más alto."
+            var link=document.getElementById("link");
+            link.setAttribute("href","https://www.hbomax.com/co/es/series/urn:hbo:series:GVU2cggagzYNJjhsJATwo");
+            link.setAttribute("class","card-link");
+            link.setAttribute("id","link");
+            link.innerHTML="Game of Thrones en HBO"
+        }
+    </script>
+    <script>
+        function Anillos_poder(){
+            var titulo=document.getElementById("tituloCard");
+            titulo.innerHTML="Los Anillos De Poder"
+            var imagen=document.getElementById("imagen");
+            imagen.setAttribute("src","Poder.jpg" )
+            imagen.setAttribute("width","450rem")
+            imagen.setAttribute("height","530rem");
+            imagen.setAttribute("id","imagen");
+            var texto=document.getElementById("texto");
+            texto.innerHTML="Comenzando en un tiempo relativamente pacífico, acompañamos a un grupo de personajes mientras enfrentan el resurgimiento del mal en la Tierra Media. Desde las profundidades más oscuras de las Montañas Nubladas hasta el majestuoso bosque de Lindon, la imponente isla de Númenor y los rincones más lejanos del mapa, estos reinos y personajes darán lugar a legados que perdurarán en el tiempo."
+            var link=document.getElementById("link");
+            link.setAttribute("href","https://www.primevideo.com/detail/amzn1.dv.gti.f856462e-f3f0-47d6-99a7-8e7900ffb935?ref_=dvm_pds_tit_co_dc_s_g_mkw_snAmp9lYL-dc_pcrid_615012702148&mrntrk=slid__pgrid_141523614164_pgeo_1003659_x__ptid_kwd-1730394547146");
+            link.setAttribute("class","card-link");
+            link.setAttribute("id","link");
+            link.innerHTML="Los anillos de poder en Amazon"
+        }
+    </script>
+    <script>
+        function Shameless(){
+            var titulo=document.getElementById("tituloCard");
+            titulo.innerHTML="Shamelles"
+            var imagen=document.getElementById("imagen");
+            imagen.setAttribute("src","Shameless.jpg" )
+            imagen.setAttribute("width","450rem")
+            imagen.setAttribute("height","530rem");
+            imagen.setAttribute("id","imagen");
+            var texto=document.getElementById("texto");
+            texto.innerHTML="El actor William H. Macy, nominado a un premio del Oscar, protagoniza a Frank Gallagher, un padre soltero de seis jóvenes. Frank pasa mucho de su tiempo libre tomando en los bares. Los niños de Gallagher, liderados por la hija mayor Fiona, tratan de sobrevivir por sí solos y vivir 'correctamente' a pesar de la falta de los cuidados de sus padres, la madre aparece de vez en cuando en la vida de los chicos, cuando ellos deciden actuar como padres, su acercamiento es totalmente inapropiado y perturbador."+
+            " Una serie en la que los padres actúan como adolescentes y los hijos como adultos."
+            var link=document.getElementById("link");
+            link.setAttribute("href","https://play.hbomax.com/page/urn:hbo:page:GYGhFzgNeM8PDcgEAAAAJ:type:series?source=googleHBOMAX&action=open");
+            link.setAttribute("class","card-link");
+            link.setAttribute("id","link");
+            link.innerHTML="Shameless en HBO"
+        }
+    </script>
+    <script>
+        function Arcane(){
+            var titulo=document.getElementById("tituloCard");
+            titulo.innerHTML="Arcane"
+            var imagen=document.getElementById("imagen");
+            imagen.setAttribute("src","Arcane.jpg" )
+            imagen.setAttribute("width","450rem")
+            imagen.setAttribute("height","530rem");
+            imagen.setAttribute("id","imagen");
+            var texto=document.getElementById("texto");
+            texto.innerHTML="Con las dispares ciudades de Piltover y Zaun como telón de fondo, dos hermanas luchan en bandos opuestos de una guerra entre tecnologías mágicas y creencias enfrentadas."
+            var link=document.getElementById("link");
+            link.setAttribute("href","https://www.netflix.com/co/title/81435684?source=35");
+            link.setAttribute("class","card-link");
+            link.setAttribute("id","link");
+            link.innerHTML="Arcane en Netflix"
+        }
+    </script>
+    <script>
+        function Primal(){
+            var titulo=document.getElementById("tituloCard");
+            titulo.innerHTML="Primal"
+            var imagen=document.getElementById("imagen");
+            imagen.setAttribute("src","Primal.jpg" )
+            imagen.setAttribute("width","450rem")
+            imagen.setAttribute("height","530rem");
+            imagen.setAttribute("id","imagen");
+            var texto=document.getElementById("texto");
+            texto.innerHTML="En los albores de la evolución, un hombre de las cavernas y un dinosaurio a punto de extinguirse se unen por tragedias desafortunadas y se convierten en la única esperanza mutua de supervivencia en un mundo traicionero."
+            var link=document.getElementById("link");
+            link.setAttribute("href","https://play.hbomax.com/page/urn:hbo:page:GXk8fHwihoY7CZgEAACkr:type:series?source=googleHBOMAX&action=play");
+            link.setAttribute("class","card-link");
+            link.setAttribute("id","link");
+            link.innerHTML="Primal en HBO"
+        }
+    </script>
+    <script>
+        var promedio=document.getElementById("1");
+        promedio.innerHTML="3.9"
+</script>
+</body>
+</html> 
